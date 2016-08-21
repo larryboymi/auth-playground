@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 import GAuthMain from './components/GAuthMain.jsx'
 import GAuthPopup from './components/GAuthPopup.jsx'
-console.log('something')
 
 ReactDOM.render(
   <Router history={browserHistory}>

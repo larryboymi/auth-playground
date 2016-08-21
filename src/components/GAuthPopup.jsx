@@ -2,7 +2,6 @@ import React from 'react'
 import firebase from 'firebase'
 import Button from 'react-bootstrap/lib/Button'
 
-console.log('hello')
 const config = {
     apiKey: "",
     authDomain: "",
@@ -12,7 +11,6 @@ const config = {
 const testApp = firebase.initializeApp(config);
 
 const provider = new firebase.auth.GithubAuthProvider()
-console.log('hello')
 
 
 const handler = () =>
@@ -21,7 +19,7 @@ const handler = () =>
     var token = result.credential.accessToken;
   // The signed-in user info.
     var user = result.user;
-    console.log('The result is ' + JSON.stringify(result))
+    console.log(JSON.stringify(obj, null, 2))
   // ...
   })
   .catch((error) => {
