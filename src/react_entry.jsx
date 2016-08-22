@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, browserHistory, IndexRoute} from 'react-router'
-import GAuthMain from './components/GAuthMain.jsx'
 import GAuthPopup from './components/GAuthPopup.jsx'
+import Nav from './components/Nav.jsx'
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path="/firebase" component={GAuthMain}>
-      <Route path="popup" component={GAuthPopup}/>
-      <Route path="redirect" component={GAuthPopup}/>
+    <Route path="/" component={Nav}>
+      <Route path="/firebase/popup" component={GAuthPopup}/>
+      <Route path="/firebase/redirect" component={GAuthPopup}/>
     </Route>
   </Router>, document.getElementById('main'))

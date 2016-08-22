@@ -19,7 +19,7 @@ const handler = () =>
     var token = result.credential.accessToken;
   // The signed-in user info.
     var user = result.user;
-    console.log(JSON.stringify(obj, null, 2))
+    console.log(JSON.stringify(result, null, 2))
   // ...
   })
   .catch((error) => {
